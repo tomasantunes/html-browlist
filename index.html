@@ -1,0 +1,30 @@
+<div id="table"></div>
+
+<script src="html-browlist.js"></script>
+<script>
+  const data = [
+    { name: "Alice", age: 30, city: "Lisbon" },
+    { name: "Bob", age: 25, city: "Porto" }
+  ];
+
+  htmlBrowlist(data, document.getElementById("table"), {
+    tableClass: "editable-table",
+    footerRowHeight: "30px",
+
+    onChange(rowIndex, key, oldValue, newValue, row) {
+        console.log("Changed:", rowIndex, key, oldValue, "→", newValue);
+    },
+
+    onInsert(row) {
+        console.log("Inserted:", row);
+    },
+
+    onDelete(row) {
+        console.log("Deleted:", row);
+    }
+});
+
+</script>
+<style>
+    
+</style>

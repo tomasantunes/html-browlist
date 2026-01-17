@@ -1,0 +1,16 @@
+.editable-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.editable-table th, .editable-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.editable-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.editable-table tfoot td {
+    min-height: 40px;
+}
