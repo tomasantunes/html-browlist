@@ -1,30 +1,38 @@
-<div id="table"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Browlist</title>
+    <link rel="stylesheet" href="html-browlist-theme.css">
+</head>
+<body>
+    <div id="table"></div>
 
-<script src="html-browlist.js"></script>
-<script>
-  const data = [
-    { name: "Alice", age: 30, city: "Lisbon" },
-    { name: "Bob", age: 25, city: "Porto" }
-  ];
+    <script src="html-browlist.js"></script>
+    <script>
+    const data = [
+        { name: "Alice", age: 30, city: "Lisbon" },
+        { name: "Bob", age: 25, city: "Porto" }
+    ];
 
-  htmlBrowlist(data, document.getElementById("table"), {
-    tableClass: "editable-table",
-    footerRowHeight: "30px",
+    htmlBrowlist(data, document.getElementById("table"), {
+        tableClass: "editable-table",
+        footerRowHeight: "30px",
 
-    onChange(rowIndex, key, oldValue, newValue, row) {
-        console.log("Changed:", rowIndex, key, oldValue, "→", newValue);
-    },
+        onChange(rowIndex, key, oldValue, newValue, row) {
+            console.log("Changed:", rowIndex, key, oldValue, "→", newValue);
+        },
 
-    onInsert(row) {
-        console.log("Inserted:", row);
-    },
+        onInsert(row) {
+            console.log("Inserted:", row);
+        },
 
-    onDelete(row) {
-        console.log("Deleted:", row);
-    }
-});
+        onDelete(row) {
+            console.log("Deleted:", row);
+        }
+    });
 
-</script>
-<style>
-    
-</style>
+    </script>
+</body>
+</html>
